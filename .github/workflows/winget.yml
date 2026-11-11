@@ -1,8 +1,11 @@
 name: Publish to WinGet
 
+# Original triggers preserved; manual-only for test cost control.
+# on:
+#   release:
+#     types: [published]
 on:
-  release:
-    types: [published]
+  workflow_dispatch:
 
 env:
   REGEX: 'Microsoft\.WindowsTerminal(?:Preview)?_([\d.]+)_8wekyb3d8bbwe\.msixbundle$'

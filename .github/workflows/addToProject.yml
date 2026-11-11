@@ -1,11 +1,14 @@
 name: Add triaged bugs & tasks to project board
 # https://github.com/actions/add-to-project
 
+# Original triggers preserved; manual-only for test cost control.
+# on:
+#   issues:
+#     types:
+#       - labeled
+#       - unlabeled
 on:
-  issues:
-    types:
-      - labeled
-      - unlabeled
+  workflow_dispatch:
 
 permissions: {}
 jobs:

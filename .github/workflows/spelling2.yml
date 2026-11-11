@@ -57,22 +57,25 @@ name: Spell checking
 #     # remove `experimental_apply_changes_via_bot: 1`
 #     ... otherwise, adjust the `with:` as you wish
 
+# Original triggers preserved; manual-only for test cost control.
+# on:
+#   push:
+#     branches:
+#       - "**"
+#     tags-ignore:
+#       - "**"
+#   pull_request_target:
+#     branches:
+#       - "**"
+#     types:
+#       - "opened"
+#       - "reopened"
+#       - "synchronize"
+#   issue_comment:
+#     types:
+#       - "created"
 on:
-  push:
-    branches:
-      - "**"
-    tags-ignore:
-      - "**"
-  pull_request_target:
-    branches:
-      - "**"
-    types:
-      - "opened"
-      - "reopened"
-      - "synchronize"
-  issue_comment:
-    types:
-      - "created"
+  workflow_dispatch:
 
 permissions: {}
 
